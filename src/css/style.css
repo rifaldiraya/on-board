@@ -1,0 +1,12 @@
+.section-title {
+    padding: 30px;
+}
+
+.section-title-bandwith {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.bg-gray{
+    background-color: gray;
+}
