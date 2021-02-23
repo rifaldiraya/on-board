@@ -3,6 +3,7 @@ import { Input, Space, Card } from 'antd';
 import IntegerStep from '../../component/IntegerStep'
 import WoContent from './WoContent'
 import axios from 'axios'
+import Title from 'antd/lib/typography/Title'
 import {TableOutlined} from '@ant-design/icons'
 
 const { Search } = Input;
@@ -33,11 +34,11 @@ class BandwidthOnPaperWO extends Component {
         return(
             <Fragment>
                 <div className="section-title-bandwith">
-                    <h2>Bandwidth On Paper (WO)</h2>
+                    <Title level={1}>Bandwidth On Paper (WO)</Title>
                 </div>
                 <div className="container">
                     <div className="card-content bg-grey">
-                        <Card headStyle={{backgroundColor: '#e1e5eb'}}icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
+                        <Card headStyle={{backgroundColor: '#e1e5eb'}} icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
                             <div className="integer-step">
                                 <IntegerStep style={{display: 'inline'}}/>
                             </div>

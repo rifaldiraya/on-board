@@ -15,18 +15,6 @@ import BandwidthOnPaperSetOnActive from './pages/BandwidthOnPaperSetOnActive/Ban
 import BandwidthOnPaperNormal from './pages/BandwidthOnPaperNormal/BandwidthOnPaperNormal';
 import BandwidthOnPaperWO from './pages/BandwidthOnPaperWO/BandwithOnPaperWO';
 
-import { Layout, Menu } from 'antd';
-import Title from 'antd/lib/typography/Title'
-import {
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
-    MinusSquareOutlined,
-    DashboardOutlined,
-    MenuOutlined,
-    BarChartOutlined
-} from '@ant-design/icons';
-
-
 function App() {
   return (
     <div className="App">

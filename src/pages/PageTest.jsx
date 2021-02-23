@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react'
 import { Layout, Menu } from 'antd';
 import Title from 'antd/lib/typography/Title'
 import {
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
     MinusSquareOutlined,
     DashboardOutlined,
     MenuOutlined,
@@ -15,6 +13,7 @@ import BandwidthOnPaperSetOnActive from './BandwidthOnPaperSetOnActive/Bandwidth
 import BandwidthOnPaperNormal from './BandwidthOnPaperNormal/BandwidthOnPaperNormal'
 import BandwidthOnPaperWO from './BandwidthOnPaperWO/BandwithOnPaperWO'
 import Traffic from './Traffic/Traffic'
+import Dashboard from './Dashboard'
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content, Footer } = Layout;
@@ -71,7 +70,7 @@ class PageTest extends Component {
                         minHeight: 280,
                         }}
                     >
-                    <BandwidthOnPaperWO />
+                    <BandwidthOnPaperSetOnActive />
                     </Content>
                     </Layout>
                 </Layout>

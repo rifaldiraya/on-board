@@ -1,9 +1,9 @@
 .section-title {
-    padding: 30px;
+    padding: 20px;
+    font-weight: bold;
 }
 
 .section-title-bandwith h2 {
-    padding: 10px;
     font-weight: bold;
 }
 

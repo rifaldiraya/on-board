@@ -2,17 +2,14 @@ import React, { Component, Fragment } from 'react'
 import { Card } from 'antd';
 import axios from 'axios'
 import NormalContent from '../BandwidthOnPaperNormal/NormalContent'
+import Title from 'antd/lib/typography/Title'
 
-const gridStyle = {
+const titleGridStyle = {
     width: '16.6666%',
-    height: 100,
     textAlign: 'center',
-  };
-  
-  const titleGridStyle = {
-      width: '16.6666%',
-      textAlign: 'center'
-  }
+    height: 80,
+    fontWeight: 'bold'
+}
 
 class BandwidthOnPaperNormal extends Component {
     state = {
@@ -30,11 +27,11 @@ class BandwidthOnPaperNormal extends Component {
         return(
             <Fragment>
                 <div className="section-title-bandwith">
-                    <h2>Bandwith On Paper Normal</h2>
+                    <Title level={1}>Bandwith On Paper (Normal)</Title>
                 </div>
                 <div className="container">
                     <div className="card-content bg-grey">
-                        <Card title="Bandwith On Paper: February 22, 2021, 10:37 am">
+                        <Card headStyle={{backgroundColor: '#e1e5eb'}} title="Bandwith On Paper: February 22, 2021, 10:37 am">
                             <div className="card-title">
                                 <Card.Grid hoverable={false} style={titleGridStyle}>No.</Card.Grid>
                                 <Card.Grid hoverable={false} style={titleGridStyle}>Customer ID</Card.Grid>

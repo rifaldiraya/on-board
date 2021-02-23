@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Card } from 'antd';
 import axios from 'axios'
 import TrafficContent from '../Traffic/TrafficContent'
+import Title from 'antd/lib/typography/Title'
 
 const titleGridStyle = {
     width: '12.5%',
@@ -26,11 +27,11 @@ class Traffic extends Component {
         return(
             <Fragment>
                 <div className="section-title-bandwith">
-                    <h2>Traffic User</h2>
+                    <Title level={1}>Traffic User</Title>
                 </div>
                 <div className="container">
                     <div className="card-content bg-grey">
-                        <Card title="Date Traffic: February 22, 2021">
+                        <Card headStyle={{backgroundColor: '#e1e5eb'}}  title="Date Traffic: February 22, 2021">
                             <div className="card-title">
                                 <Card.Grid hoverable={false} style={titleGridStyle}>No.</Card.Grid>
                                 <Card.Grid hoverable={false} style={titleGridStyle}>Customer</Card.Grid>
