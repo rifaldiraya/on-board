@@ -2,11 +2,43 @@
     padding: 30px;
 }
 
-.section-title-bandwith {
+.section-title-bandwith h2 {
     padding: 10px;
     font-weight: bold;
 }
 
 .bg-gray{
     background-color: gray;
+}
+
+.input-search {
+    padding-bottom: 10px;
+    margin-right: 0px;
+    text-align: right;
+}
+
+.main-header {
+    color:  #6b6f72;
+    background: #6b6f72;
+}
+
+.integer-step {
+}
+
+.footer-sider {
+    position: absolute;
+    bottom: 0px;
+    margin: 0px;
+    color: rgb(63, 63, 63);
+    width: 100%;
+}
+
+.gridStyle {
+    width: '12.5%';
+    text-align: 'left';
+    height: 100
+}
+
+.page-test {
+    background-color: white;
 }

@@ -1,0 +1,183 @@
+{
+  "postWo": [{
+      "no": 1,
+      "id": 1,
+      "customerID": 19743,
+      "billingName": "Bend. Desa Raci Wetan",
+      "sumOfProduct": 1,
+      "bop": 5,
+      "projectID": 12372,
+      "productState": "Normal"
+    },
+    {
+      "no": 2,
+      "id": 2,
+      "customerID": 18565,
+      "billingName": "CV. Duta Raya Makmur",
+      "sumOfProduct": 2,
+      "bop": 15,
+      "projectID": 13170,
+      "productState": "Temporary Installation"
+    },
+    {
+      "no": 3,
+      "id": 3,
+      "customerID": 20342,
+      "billingName": "Desa Abar Abir",
+      "sumOfProduct": 1,
+      "bop": 5,
+      "projectID": 12763,
+      "productState": "Normal"
+    },
+    {
+      "no": 4,
+      "id": 4,
+      "customerID": 19745,
+      "billingName": "Desa Indrodelik",
+      "sumOfProduct": 1,
+      "bop": 5,
+      "projectID": 12378,
+      "productState": "Normal"
+    },
+    {
+      "no": 5,
+      "id": 5,
+      "customerID": 20607,
+      "billingName": "Desa Kisik Gresik",
+      "sumOfProduct": 1,
+      "bop": 5,
+      "projectID": 13020,
+      "productState": "Normal"
+    }
+  ],
+
+  "postNormal": [{
+      "no": 1,
+      "id": 1,
+      "customerID": 18751,
+      "customerName": "Yunaidi Kwandoko",
+      "productList": "D~Net Flex 30 Mbps",
+      "sumOfList": 1,
+      "bop": 30
+    },
+    {
+      "no": 2,
+      "id": 2,
+      "customerID": 16323,
+      "customerName": "Yoseph Halley Limanto",
+      "productList": "Broadband 30 Mbps",
+      "sumOfList": 1,
+      "bop": 30
+    },
+    {
+      "no": 3,
+      "id": 3,
+      "customerID": 618,
+      "customerName": "Yoichi Inutska",
+      "productList": "D~Net Corporate Dedicated 10 Mbps",
+      "sumOfList": 1,
+      "bop": 30
+    },
+    {
+      "no": 4,
+      "id": 4,
+      "customerID": 19059,
+      "customerName": "Yeny Kalim",
+      "productList": "D~Net Dedicated Lite 5 Mbps",
+      "sumOfList": 1,
+      "bop": 5
+    },
+    {
+      "no": 5,
+      "id": 5,
+      "customerID": 15095,
+      "customerName": "Yayasan Yohanes Gabriel Perwakilan II",
+      "productList": "D~Net Dedicated Lite 12 Mbps",
+      "sumOfList": 1,
+      "bop": 12
+    }
+  ],
+
+  "postActive": [{
+      "no": 1,
+      "id": 1,
+      "customerID": 15173,
+      "customerName": "PT. Cipta Krida Bahari",
+      "productList": "D~Net Corporate Dedicated 3 Mbps",
+      "sumOfList": 1,
+      "bop": 3
+    },
+    {
+      "no": 2,
+      "id": 2,
+      "customerID": 16814,
+      "customerName": "PT. Prima Adjusterindo Mandiri",
+      "productList": "Broadband 20 Mbps",
+      "sumOfList": 1,
+      "bop": 20
+    },
+    {
+      "no": 3,
+      "id": 3,
+      "customerID": 621,
+      "customerName": "PT. Dewata Agung Wibawa",
+      "productList": "D~Net IIX Dedicated 5 Mbps",
+      "sumOfList": 1,
+      "bop": 5
+    },
+    {
+      "no": 4,
+      "id": 4,
+      "customerID": 18001,
+      "customerName": "Agus Fahrudin",
+      "productList": "D~Net Visol Broadband 5 Mbps",
+      "sumOfList": 1,
+      "bop": 5
+    }
+  ],
+  "postTraffic": [{
+      "no": 1,
+      "id": 1,
+      "customerName": "Traffic Client_Traffic",
+      "date": "2021-02-19/16:55:00",
+      "trafficIn": "",
+      "trafficOut": "",
+      "traffic": "1194.02180179",
+      "createdAt": "2021-02-20/18:22:54.888646",
+      "updatedAt": "2021-02-20/18:22:54.888646"
+    },
+    {
+      "no": 2,
+      "id": 2,
+      "customerName": "SA Server",
+      "date": "2021-02-19/16:55:00",
+      "trafficIn": "41.51",
+      "trafficOut": "39.91",
+      "traffic": "81.42",
+      "createdAt": "2021-02-20/16:57:04.65633",
+      "updatedAt": "2021-02-20/16:57:04.65633"
+    },
+    {
+      "no": 3,
+      "id": 3,
+      "customerName": "Intercity JKT-SGG Traffic",
+      "date": "2021-02-19/16:55:00",
+      "trafficIn": "2.76",
+      "trafficOut": "0.22",
+      "traffic": "2.98",
+      "createdAt": "2021-02-20/16:56:59.521068",
+      "updatedAt": "2021-02-20/16:56:59.521068"
+    },
+    {
+      "no": 4,
+      "id": 4,
+      "customerName": "Intercity SBY-MLG Traffic",
+      "date": "2021-02-19/16:55:00",
+      "trafficIn": "60.48",
+      "trafficOut": "7.48",
+      "traffic": "67.96",
+      "createdAt": "2021-02-20/16:56:58.243089",
+      "updatedAt": "2021-02-20/16:56:58.243089"
+    }
+  ]
+}
