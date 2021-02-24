@@ -122,4 +122,4 @@ class Dashboard extends PureComponent {
   }
 }
 
-export default Dashboard
+export default Dashboard;

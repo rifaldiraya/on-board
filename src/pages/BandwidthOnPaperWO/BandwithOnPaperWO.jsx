@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import { Input, Space, Card, Row, Col, InputNumber } from 'antd';
-import IntegerStep from '../../component/IntegerStep'
 import WoContent from './WoContent'
 import axios from 'axios'
 import Title from 'antd/lib/typography/Title'
@@ -39,12 +38,6 @@ class BandwidthOnPaperWO extends Component {
         });
       };
 
-      displayEntries = () => {
-          for (let index = 0; index < this.state.inputValue; index++) {
-            return <WoContent key={index} data={index}/>
-          }
-      }
-
     render(){
         const { inputValue } = this.state;
         return(
@@ -54,7 +47,7 @@ class BandwidthOnPaperWO extends Component {
                 </div>
                 <div className="container">
                     <div className="card-content bg-grey">
-                    <Card headStyle={{backgroundColor: '#e1e5eb'}} icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
+                        <Card headStyle={{backgroundColor: '#e1e5eb'}} icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
                             <Row>
                                 <Col span={12}>
                                     <Space>
