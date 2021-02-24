@@ -21,6 +21,7 @@ const { Header, Sider, Content, Footer } = Layout;
 class PageTest extends Component {
     state = {
         collapsed: false,
+        key: ""
       };
     
       toggle = () => {
@@ -28,6 +29,38 @@ class PageTest extends Component {
           collapsed: !this.state.collapsed,
         });
       };
+
+    handleClick = (event) => {
+        console.log(event.key);
+        this.setState({
+            key: event.key
+        }, () => {
+            console.log(this.state.key)
+        })
+    }
+
+    displayPage = () => {
+       switch (this.state.key) {
+            case 'dashboard':
+                console.log(this.state.key);
+               return <Dashboard />
+            case 'traffic':
+                console.log(this.state.key);
+                return <Traffic />    
+            case 'wo':
+                console.log(this.state.key);
+                return <BandwidthOnPaperWO />    
+            case 'normal':
+                console.log(this.state.key);
+                return <BandwidthOnPaperNormal />    
+            case 'active':
+                console.log(this.state.key);
+                return <BandwidthOnPaperSetOnActive />    
+            default:
+                console.log(this.state.key);
+                return <Dashboard />
+       }
+    }
 
     render(){
         return(
@@ -45,16 +78,16 @@ class PageTest extends Component {
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <p className="section-title">DASHBOARD</p>
-                        <Menu.Item href="/dashboard" key="dashboard" icon={<DashboardOutlined />}>
+                        <Menu.Item href="/dashboard" key="dashboard" onClick={this.handleClick} icon={<DashboardOutlined />}>
                         Dashboard
                         </Menu.Item>
                         <p className="section-title">RAW DATA</p>
                         <SubMenu key="sub1" icon={<MinusSquareOutlined />} title="Bandwith On Paper">
-                            <Menu.Item href="/active" key="active">BOP (Set Active)</Menu.Item>
-                            <Menu.Item href="/wo" key="wo">BOP (WO)</Menu.Item>
-                            <Menu.Item href="/normal" key="normal">BOP Summary</Menu.Item>
+                            <Menu.Item href="/active" key="active" onClick={this.handleClick}>BOP (Set Active)</Menu.Item>
+                            <Menu.Item href="/wo" key="wo" onClick={this.handleClick}>BOP (WO)</Menu.Item>
+                            <Menu.Item href="/normal" key="normal" onClick={this.handleClick}>BOP Summary</Menu.Item>
                         </SubMenu>
-                        <Menu.Item href="/traffic" key="traffic" icon={<BarChartOutlined />}>
+                        <Menu.Item href="/traffic" key="traffic" onClick={this.handleClick} icon={<BarChartOutlined />}>
                         Traffic
                         </Menu.Item>
                     </Menu>
@@ -70,7 +103,7 @@ class PageTest extends Component {
                         minHeight: 280,
                         }}
                     >
-                    <BandwidthOnPaperSetOnActive />
+                        {this.displayPage()}
                     </Content>
                     </Layout>
                 </Layout>
