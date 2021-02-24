@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Card } from 'antd';
+import { Card } from 'antd'
 import axios from 'axios'
 import NormalContent from '../BandwidthOnPaperNormal/NormalContent'
 import Title from 'antd/lib/typography/Title'

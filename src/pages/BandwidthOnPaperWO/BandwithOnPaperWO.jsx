@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Input, Space, Card } from 'antd';
+import { Input, Space, Card, Row, Col, InputNumber } from 'antd';
 import IntegerStep from '../../component/IntegerStep'
 import WoContent from './WoContent'
 import axios from 'axios'
@@ -16,10 +16,10 @@ const titleGridStyle = {
     height: 80
 }
 
-
 class BandwidthOnPaperWO extends Component {
     state ={
-        post: []
+        post: [],
+        inputValue: 1
     }
 
     componentDidMount() {
@@ -30,7 +30,23 @@ class BandwidthOnPaperWO extends Component {
         })
     }
 
+    onChange = value => {
+        this.setState({
+          inputValue: value,
+        }, () => {
+            console.log(this.state.inputValue)
+            console.log("post length: "+ this.state.post.length)
+        });
+      };
+
+      displayEntries = () => {
+          for (let index = 0; index < this.state.inputValue; index++) {
+            return <WoContent key={index} data={index}/>
+          }
+      }
+
     render(){
+        const { inputValue } = this.state;
         return(
             <Fragment>
                 <div className="section-title-bandwith">
@@ -38,16 +54,31 @@ class BandwidthOnPaperWO extends Component {
                 </div>
                 <div className="container">
                     <div className="card-content bg-grey">
-                        <Card headStyle={{backgroundColor: '#e1e5eb'}} icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
-                            {/* <div className="integer-step">
-                                <IntegerStep style={{display: 'inline'}}/>
-                            </div>
-                            <div className="input-search">
-                                <label style={{display: 'inline', paddingBottom: '0px', paddingRight: '5px'}}>Search: </label>
-                                <Space direction="vertical">
-                                    <Search placeholder="input search text" enterButton="Search" onSearch={onSearch} style={{ width: 200 }} />
-                                </Space>
-                            </div> */}
+                    <Card headStyle={{backgroundColor: '#e1e5eb'}} icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
+                            <Row>
+                                <Col span={12}>
+                                    <Space>
+                                        Show 
+                                        <Row>
+                                            <Col span={4}>
+                                            <InputNumber
+                                                min={1}
+                                                max={100}
+                                                value={inputValue}
+                                                style={{padding: '0px'}}
+                                                onChange={this.onChange}
+                                            />
+                                            </Col>
+                                        </Row> 
+                                        entries
+                                    </Space>
+                                </Col>
+                                <Col span={12}>
+                                    <div className="input-search">
+                                        <Search placeholder="input search text" enterButton="Search" onSearch={onSearch} style={{ width: 200 }} />
+                                    </div>
+                                </Col>
+                            </Row>
                             <div className="card-title">
                                 <Card.Grid hoverable={false} style={titleGridStyle}>No.</Card.Grid>
                                 <Card.Grid hoverable={false} style={titleGridStyle}>Customer ID</Card.Grid>

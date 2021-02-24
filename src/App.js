@@ -4,9 +4,6 @@ import './App.css';
 //Routing
 import { BrowserRouter, Route} from 'react-router-dom'
 
-//Components
-import Navbar from './component/Navbar'
-
 //Pages
 import PageTest from './pages/PageTest'
 import Traffic from './pages/Traffic/Traffic'

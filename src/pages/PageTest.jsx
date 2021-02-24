@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Layout, Menu } from 'antd';
 import Title from 'antd/lib/typography/Title'
 import {
@@ -16,7 +16,7 @@ import Traffic from './Traffic/Traffic'
 import Dashboard from './Dashboard'
 
 const { SubMenu } = Menu;
-const { Header, Sider, Content, Footer } = Layout;
+const { Header, Sider, Content } = Layout;
 
 class PageTest extends Component {
     state = {
