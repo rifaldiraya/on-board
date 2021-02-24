@@ -3,7 +3,7 @@
     font-weight: bold;
 }
 
-.section-title-bandwith h2 {
+.section-title-bandwidth h2 {
     font-weight: bold;
 }
 
@@ -27,9 +27,10 @@
 
 .footer-sider {
     position: absolute;
+    background-color: #001529;
+    padding-left: 10px;
     bottom: 0px;
     margin: 0px;
-    color: rgb(63, 63, 63);
     width: 100%;
 }
 
@@ -41,4 +42,16 @@
 
 .page-test {
     background-color: white;
+}
+
+.user-bop {
+    padding: 30px 0px 30px 0px;
+}
+
+.grafik-bop {
+    padding-top: 30px;
+}
+
+.grafik-traffic{
+    padding-top: 30px;
 }

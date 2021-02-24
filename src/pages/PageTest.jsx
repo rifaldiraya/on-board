@@ -34,80 +34,70 @@ class PageTest extends Component {
         console.log(event.key);
         this.setState({
             key: event.key
-        }, () => {
-            console.log(this.state.key)
         })
     }
 
     displayPage = () => {
        switch (this.state.key) {
             case 'dashboard':
-                console.log(this.state.key);
                return <Dashboard />
             case 'traffic':
-                console.log(this.state.key);
                 return <Traffic />    
             case 'wo':
-                console.log(this.state.key);
                 return <BandwidthOnPaperWO />    
             case 'normal':
-                console.log(this.state.key);
                 return <BandwidthOnPaperNormal />    
             case 'active':
-                console.log(this.state.key);
                 return <BandwidthOnPaperSetOnActive />    
             default:
-                console.log(this.state.key);
                 return <Dashboard />
        }
     }
 
     render(){
         return(
-            <Fragment>
+            <Layout>
+                <Header style={{backgroundColor: "rgba(0, 0, 0, 0.70)"}}>
+                <Title style={{color:'white', paddingTop:'15px', maxWidth: 200}} level={4}>Re-Order Point</Title>
+                {React.createElement(this.state.collapsed ? MenuOutlined : MenuOutlined, {
+                    className: 'trigger',
+                    onClick: this.toggle,
+                    })}
+                </Header>          
                 <Layout>
-                    <Header>
-                    <Title style={{color:'white', paddingTop:'15px', maxWidth: 200}} level={4}>Re-Order Point</Title>
-                    {React.createElement(this.state.collapsed ? MenuOutlined : MenuOutlined, {
-                        className: 'trigger',
-                        onClick: this.toggle,
-                        })}
-                    </Header>          
-                    <Layout>
-                    <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-                    <div className="logo" />
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                        <p className="section-title">DASHBOARD</p>
-                        <Menu.Item href="/dashboard" key="dashboard" onClick={this.handleClick} icon={<DashboardOutlined />}>
-                        Dashboard
-                        </Menu.Item>
-                        <p className="section-title">RAW DATA</p>
-                        <SubMenu key="sub1" icon={<MinusSquareOutlined />} title="Bandwith On Paper">
-                            <Menu.Item href="/active" key="active" onClick={this.handleClick}>BOP (Set Active)</Menu.Item>
-                            <Menu.Item href="/wo" key="wo" onClick={this.handleClick}>BOP (WO)</Menu.Item>
-                            <Menu.Item href="/normal" key="normal" onClick={this.handleClick}>BOP Summary</Menu.Item>
-                        </SubMenu>
-                        <Menu.Item href="/traffic" key="traffic" onClick={this.handleClick} icon={<BarChartOutlined />}>
-                        Traffic
-                        </Menu.Item>
-                    </Menu>
-                    <div className="footer-sider">
-                        <Footer style={{ textAlign: 'left', color: 'grey'}}>Logged in as:<br /> Affendi</Footer>
-                    </div>
-                    </Sider>
-                    <Content
-                        className="site-layout-background"
-                        style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
-                        }}
-                    >
-                        {this.displayPage()}
-                    </Content>
-                    </Layout>
+                <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+                <div className="logo" />
+                <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+                    <p className="section-title">DASHBOARD</p>
+                    <Menu.Item href="/dashboard" key="dashboard" onClick={this.handleClick} icon={<DashboardOutlined />}>
+                    Dashboard
+                    </Menu.Item>
+                    <p className="section-title">RAW DATA</p>
+                    <SubMenu key="sub1" icon={<MinusSquareOutlined />} title="Bandwith On Paper">
+                        <Menu.Item href="/active" key="active" onClick={this.handleClick}>BOP (Set Active)</Menu.Item>
+                        <Menu.Item href="/wo" key="wo" onClick={this.handleClick}>BOP (WO)</Menu.Item>
+                        <Menu.Item href="/normal" key="normal" onClick={this.handleClick}>BOP Summary</Menu.Item>
+                    </SubMenu>
+                    <Menu.Item href="/traffic" key="traffic" onClick={this.handleClick} icon={<BarChartOutlined />}>
+                    Traffic
+                    </Menu.Item>
+                </Menu>
+                <div className="footer-sider">
+                    <Title style={{color: 'gray', marginTop: '10px'}} level={5}>Logged in as: <br/> Affendi</Title>
+                </div>
+                </Sider>
+                <Content
+                    className="site-layout-background"
+                    style={{
+                    margin: '24px 16px',
+                    padding: 24,
+                    minHeight: 280,
+                    }}
+                >
+                    {this.displayPage()}
+                </Content>
                 </Layout>
-            </Fragment>
+            </Layout>
         )
     }
 }

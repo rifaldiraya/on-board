@@ -26,8 +26,8 @@ class BandwidthOnPaperNormal extends Component {
     render(){
         return(
             <Fragment>
-                <div className="section-title-bandwith">
-                    <Title level={1}>Bandwith On Paper (Normal)</Title>
+                <div className="section-title-bandwidth">
+                    <Title level={1}>Bandwidth On Paper (Normal)</Title>
                 </div>
                 <div className="container">
                     <div className="card-content bg-grey">

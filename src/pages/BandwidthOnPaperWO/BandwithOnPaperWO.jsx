@@ -39,7 +39,7 @@ class BandwidthOnPaperWO extends Component {
                 <div className="container">
                     <div className="card-content bg-grey">
                         <Card headStyle={{backgroundColor: '#e1e5eb'}} icon={<TableOutlined />} title="Bandwith On Paper: February 22, 2021, 10:41 am">
-                            <div className="integer-step">
+                            {/* <div className="integer-step">
                                 <IntegerStep style={{display: 'inline'}}/>
                             </div>
                             <div className="input-search">
@@ -47,7 +47,7 @@ class BandwidthOnPaperWO extends Component {
                                 <Space direction="vertical">
                                     <Search placeholder="input search text" enterButton="Search" onSearch={onSearch} style={{ width: 200 }} />
                                 </Space>
-                            </div>
+                            </div> */}
                             <div className="card-title">
                                 <Card.Grid hoverable={false} style={titleGridStyle}>No.</Card.Grid>
                                 <Card.Grid hoverable={false} style={titleGridStyle}>Customer ID</Card.Grid>

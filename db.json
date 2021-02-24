@@ -48,6 +48,16 @@
       "bop": 5,
       "projectID": 13020,
       "productState": "Normal"
+    },
+    {
+      "no": 6,
+      "id": 6,
+      "customerID": 20565,
+      "billingName": "Desa Masangan Bungah Gresik",
+      "sumOfProduct": 1,
+      "bop": 5,
+      "projectID": 12970,
+      "productState": "Normal"
     }
   ],
 
@@ -95,6 +105,15 @@
       "productList": "D~Net Dedicated Lite 12 Mbps",
       "sumOfList": 1,
       "bop": 12
+    },
+    {
+      "no": 6,
+      "id": 6,
+      "customerID": 18970,
+      "customerName": "Yayasan Selamat Pagi Indonesia",
+      "productList": "D~Net Dedicated Lite 30 Mbps D~Net Dedicated",
+      "sumOfList": 2,
+      "bop": 90
     }
   ],
 

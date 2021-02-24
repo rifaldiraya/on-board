@@ -28,7 +28,7 @@ class BandwidthOnPaperSetOnActive extends Component {
     render(){
         return(
             <Fragment>
-                <div className="section-title-bandwith">
+                <div className="section-title-bandwidth">
                     <Title level={1}>Bandwidth On Paper (Set Active)</Title>
                 </div>
                 <div className="container">

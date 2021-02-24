@@ -19,7 +19,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route exact path="/" component={Dashboard}/>
         <Route path="/dashboard" component={Dashboard}/>
         <Route path="/active" component={BandwidthOnPaperSetOnActive}/>
         <Route path="/normal" component={BandwidthOnPaperNormal}/>
