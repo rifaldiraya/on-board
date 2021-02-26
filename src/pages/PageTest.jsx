@@ -15,9 +15,10 @@ import BandwidthOnPaperNormal from './BandwidthOnPaperNormal/BandwidthOnPaperNor
 import BandwidthOnPaperWO from './BandwidthOnPaperWO/BandwithOnPaperWO';
 import Traffic from './Traffic/Traffic';
 import Dashboard from './Dashboard';
+import MenuItem from 'antd/lib/menu/MenuItem';
 
 const { SubMenu } = Menu;
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 class PageTest extends Component {
   state = {
@@ -57,7 +58,7 @@ class PageTest extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout style={{ minHeight: "100vh"}}>
         <Space style={{ backgroundColor: '#1A3547' }}>
           <div className="title-bar">
             <p>Re-Order Point</p>
@@ -76,9 +77,17 @@ class PageTest extends Component {
           </Header>
         </Space>
         <Layout>
-          <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+          <Sider
+            style={{
+              overflow: 'auto',
+              height: 'static',
+            }}
+            trigger={null}
+            collapsible
+            collapsed={this.state.collapsed}
+          >
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-              <Menu.ItemGroup title="DASHBOARD">
+              <Menu.ItemGroup style={{ fontWeight: 'bold' }} title="DASHBOARD">
                 <Menu.Item
                   href="/dashboard"
                   key="dashboard"
@@ -88,7 +97,7 @@ class PageTest extends Component {
                   Dashboard
                 </Menu.Item>
               </Menu.ItemGroup>
-              <Menu.ItemGroup title="RAW DATA">
+              <Menu.ItemGroup style={{ fontWeight: 'bold' }} title="RAW DATA">
                 <SubMenu
                   key="sub1"
                   icon={<MinusSquareOutlined />}
@@ -123,9 +132,7 @@ class PageTest extends Component {
               </Menu.ItemGroup>
             </Menu>
             <div className="footer-sider">
-              <Title style={{ color: 'gray', marginTop: '10px' }} level={5}>
-                Logged in as: <br /> Affendi
-              </Title>
+              <Footer style={{ backgroundColor: "#1A3547", textAlign: 'left', color: "gray", paddingLeft: '20px' }}>Logged in as: <br/> Affendi</Footer>
             </div>
           </Sider>
           <Layout className="site-layout">
