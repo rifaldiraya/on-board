@@ -3,6 +3,7 @@ import { Card } from 'antd';
 import axios from 'axios';
 import TrafficContent from '../Traffic/TrafficContent';
 import Title from 'antd/lib/typography/Title';
+import SearchShow from '../../layout/SearchShow';
 
 const titleGridStyle = {
   width: '12.5%',
@@ -35,6 +36,7 @@ class Traffic extends Component {
               headStyle={{ backgroundColor: '#e1e5eb' }}
               title="Date Traffic: February 22, 2021"
             >
+              <SearchShow />
               <div className="card-title">
                 <Card.Grid hoverable={false} style={titleGridStyle}>
                   No.

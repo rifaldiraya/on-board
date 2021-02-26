@@ -3,6 +3,7 @@ import { Card } from 'antd';
 import ActiveContent from '../BandwidthOnPaperSetOnActive/ActiveContent';
 import axios from 'axios';
 import Title from 'antd/lib/typography/Title';
+import SearcShow from '../../layout/SearchShow';
 
 const titleGridStyle = {
   width: '16.666%',
@@ -14,6 +15,7 @@ const titleGridStyle = {
 class BandwidthOnPaperSetOnActive extends Component {
   state = {
     post: [],
+    inputValue: 1,
   };
 
   componentDidMount() {
@@ -36,6 +38,8 @@ class BandwidthOnPaperSetOnActive extends Component {
               headStyle={{ backgroundColor: '#e1e5eb' }}
               title="Bandwith On Paper: February 22, 2021, 10:37 am"
             >
+              <SearcShow />
+
               <div className="card-title">
                 <Card.Grid hoverable={false} style={titleGridStyle}>
                   No.

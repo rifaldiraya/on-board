@@ -1,3 +1,28 @@
+.logo {
+  background: url("https://placeimg.com/320/120/tech");
+  width: 420px;
+  height: 420px;
+  background-color: aqua;
+}
+
+.anticon svg {
+  display: inline-block;
+  color: white;
+}
+
+.ant-layout-header {
+  height: 64px;
+  padding: 0 50px;
+  line-height: 64px;
+}
+
+.title-bar {
+  padding: 15px 30px 0px 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
 .section-title {
   padding: 20px;
   font-weight: bold;
@@ -29,8 +54,9 @@
 .footer-sider {
   position: absolute;
   background-color: #001529;
-  padding-left: 10px;
+  padding-left: 20px;
   bottom: 0px;
+  padding-bottom: 20px;
   margin: 0px;
   width: 100%;
 }

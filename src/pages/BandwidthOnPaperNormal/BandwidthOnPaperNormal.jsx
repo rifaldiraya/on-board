@@ -3,6 +3,7 @@ import { Card } from 'antd';
 import axios from 'axios';
 import NormalContent from '../BandwidthOnPaperNormal/NormalContent';
 import Title from 'antd/lib/typography/Title';
+import SearchShow from '../../layout/SearchShow';
 
 const titleGridStyle = {
   width: '16.6666%',
@@ -35,6 +36,7 @@ class BandwidthOnPaperNormal extends Component {
               headStyle={{ backgroundColor: '#e1e5eb' }}
               title="Bandwith On Paper: February 22, 2021, 10:37 am"
             >
+              <SearchShow />
               <div className="card-title">
                 <Card.Grid hoverable={false} style={titleGridStyle}>
                   No.

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Space } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import {
   MinusSquareOutlined,
   DashboardOutlined,
-  MenuOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
   BarChartOutlined,
 } from '@ant-design/icons';
 
@@ -57,66 +58,69 @@ class PageTest extends Component {
   render() {
     return (
       <Layout>
-        <Header style={{ backgroundColor: 'rgba(0, 0, 0, 0.70)' }}>
-          <Title
-            style={{ color: 'white', paddingTop: '15px', maxWidth: 200 }}
-            level={4}
+        <Space style={{ backgroundColor: '#1A3547' }}>
+          <div className="title-bar">
+            <p>Re-Order Point</p>
+          </div>
+          <Header
+            className="site-layout-background"
+            style={{ padding: 0, background: '#1A3547' }}
           >
-            Re-Order Point
-          </Title>
-          {React.createElement(
-            this.state.collapsed ? MenuOutlined : MenuOutlined,
-            {
-              className: 'trigger',
-              onClick: this.toggle,
-            }
-          )}
-        </Header>
+            {React.createElement(
+              this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+              {
+                className: 'trigger',
+                onClick: this.toggle,
+              }
+            )}
+          </Header>
+        </Space>
         <Layout>
           <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-            <div className="logo" />
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-              <p className="section-title">DASHBOARD</p>
-              <Menu.Item
-                href="/dashboard"
-                key="dashboard"
-                onClick={this.handleClick}
-                icon={<DashboardOutlined />}
-              >
-                Dashboard
-              </Menu.Item>
-              <p className="section-title">RAW DATA</p>
-              <SubMenu
-                key="sub1"
-                icon={<MinusSquareOutlined />}
-                title="Bandwith On Paper"
-              >
+              <Menu.ItemGroup title="DASHBOARD">
                 <Menu.Item
-                  href="/active"
-                  key="active"
+                  href="/dashboard"
+                  key="dashboard"
                   onClick={this.handleClick}
+                  icon={<DashboardOutlined />}
                 >
-                  BOP (Set Active)
+                  Dashboard
                 </Menu.Item>
-                <Menu.Item href="/wo" key="wo" onClick={this.handleClick}>
-                  BOP (WO)
-                </Menu.Item>
+              </Menu.ItemGroup>
+              <Menu.ItemGroup title="RAW DATA">
+                <SubMenu
+                  key="sub1"
+                  icon={<MinusSquareOutlined />}
+                  title="Bandwith On Paper"
+                >
+                  <Menu.Item
+                    href="/active"
+                    key="active"
+                    onClick={this.handleClick}
+                  >
+                    BOP (Set Active)
+                  </Menu.Item>
+                  <Menu.Item href="/wo" key="wo" onClick={this.handleClick}>
+                    BOP (WO)
+                  </Menu.Item>
+                  <Menu.Item
+                    href="/normal"
+                    key="normal"
+                    onClick={this.handleClick}
+                  >
+                    BOP Summary
+                  </Menu.Item>
+                </SubMenu>
                 <Menu.Item
-                  href="/normal"
-                  key="normal"
+                  href="/traffic"
+                  key="traffic"
                   onClick={this.handleClick}
+                  icon={<BarChartOutlined />}
                 >
-                  BOP Summary
+                  Traffic
                 </Menu.Item>
-              </SubMenu>
-              <Menu.Item
-                href="/traffic"
-                key="traffic"
-                onClick={this.handleClick}
-                icon={<BarChartOutlined />}
-              >
-                Traffic
-              </Menu.Item>
+              </Menu.ItemGroup>
             </Menu>
             <div className="footer-sider">
               <Title style={{ color: 'gray', marginTop: '10px' }} level={5}>
@@ -124,16 +128,18 @@ class PageTest extends Component {
               </Title>
             </div>
           </Sider>
-          <Content
-            className="site-layout-background"
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              minHeight: 280,
-            }}
-          >
-            {this.displayPage()}
-          </Content>
+          <Layout className="site-layout">
+            <Content
+              className="site-layout-background"
+              style={{
+                margin: '24px 16px',
+                padding: 24,
+                minHeight: 280,
+              }}
+            >
+              {this.displayPage()}
+            </Content>
+          </Layout>
         </Layout>
       </Layout>
     );
