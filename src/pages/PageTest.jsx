@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Space } from 'antd';
-import Title from 'antd/lib/typography/Title';
 import {
   MinusSquareOutlined,
   DashboardOutlined,
@@ -58,7 +57,7 @@ class PageTest extends Component {
 
   render() {
     return (
-      <Layout style={{ minHeight: "100vh"}}>
+      <Layout style={{ minHeight: '100vh' }}>
         <Space style={{ backgroundColor: '#1A3547' }}>
           <div className="title-bar">
             <p>Re-Order Point</p>
@@ -132,7 +131,16 @@ class PageTest extends Component {
               </Menu.ItemGroup>
             </Menu>
             <div className="footer-sider">
-              <Footer style={{ backgroundColor: "#1A3547", textAlign: 'left', color: "gray", paddingLeft: '20px' }}>Logged in as: <br/> Affendi</Footer>
+              <Footer
+                style={{
+                  backgroundColor: '#1A3547',
+                  textAlign: 'left',
+                  color: 'gray',
+                  paddingLeft: '20px',
+                }}
+              >
+                Logged in as: <br /> Affendi
+              </Footer>
             </div>
           </Sider>
           <Layout className="site-layout">

@@ -82,11 +82,11 @@ class Dashboard extends PureComponent {
         <Title level={1}>Dashboard</Title>
         <div className="user-bop">
           <Row>
-            <Col span={12} sm={24} md={24} lg={12} xl={12}>
+            <Col sm={24} md={24} lg={12} xl={12}>
               <Title level={3}>User Existing (Hari ini)</Title>
               <Title level={5}>{this.state.user}</Title>
             </Col>
-            <Col span={12} sm={24} md={24} lg={12} xl={12}>
+            <Col sm={24} md={24} lg={12} xl={12}>
               <Title level={3}>Jumlah BOP (Hari ini)</Title>
               <Title level={5}>{this.state.bop}</Title>
             </Col>
@@ -94,11 +94,11 @@ class Dashboard extends PureComponent {
         </div>
 
         <Row>
-          <Col span={24} lg={24} md={24}>
+          <Col span={12} xl={12} lg={12} md={24} sm={24} xs={24}>
             <div className="grafik-traffic">
               <Title level={3}>Grafik Traffic (Hari ini)</Title>
               <LineChart
-                width={1000}
+                width={750}
                 height={400}
                 data={this.state.traffic}
                 margin={{
@@ -123,10 +123,12 @@ class Dashboard extends PureComponent {
                 <Line type="monotone" dataKey="trafficOut" stroke="#f72f36" />
               </LineChart>
             </div>
+          </Col>
 
+          <Col span={12} xl={12} lg={12} md={24} sm={24} xs={24}>
             <div className="grafik-bop">
               <Title level={3}>Grafik BOP (Hari ini)</Title>
-              <BarChart width={1000} height={400} data={this.state.bopGraf}>
+              <BarChart width={750} height={400} data={this.state.bopGraf}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="customerName" />
                 <YAxis />
