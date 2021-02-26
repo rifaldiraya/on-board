@@ -23,6 +23,7 @@ class PageTest extends Component {
   state = {
     collapsed: false,
     key: '',
+    display: '',
   };
 
   toggle = () => {
@@ -38,6 +39,43 @@ class PageTest extends Component {
     });
   };
 
+  displayFooter = (event) => {
+    switch (this.state.collapsed) {
+      case false:
+        return (
+          <div className="footer-sider">
+            <Footer
+              style={{
+                backgroundColor: '#1A3547',
+                textAlign: 'left',
+                color: 'gray',
+                paddingLeft: '20px',
+              }}
+            >
+              Logged in as: <br /> Affendi
+            </Footer>
+          </div>
+        );
+      case true:
+        return (
+          <div className="footer-sider">
+            <Footer
+              style={{
+                display: 'none',
+                backgroundColor: '#1A3547',
+                textAlign: 'left',
+                color: 'gray',
+                paddingLeft: '20px',
+              }}
+            >
+            </Footer>
+          </div>
+        );
+      default:
+        break;
+    }
+  };
+
   displayPage = () => {
     switch (this.state.key) {
       case 'dashboard':
@@ -51,7 +89,7 @@ class PageTest extends Component {
       case 'active':
         return <BandwidthOnPaperSetOnActive />;
       default:
-        return <Dashboard />;
+        return <BandwidthOnPaperWO />;
     }
   };
 
@@ -130,18 +168,7 @@ class PageTest extends Component {
                 </Menu.Item>
               </Menu.ItemGroup>
             </Menu>
-            <div className="footer-sider">
-              <Footer
-                style={{
-                  backgroundColor: '#1A3547',
-                  textAlign: 'left',
-                  color: 'gray',
-                  paddingLeft: '20px',
-                }}
-              >
-                Logged in as: <br /> Affendi
-              </Footer>
-            </div>
+            {this.displayFooter()}
           </Sider>
           <Layout className="site-layout">
             <Content
