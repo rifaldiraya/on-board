@@ -14,7 +14,6 @@ import BandwidthOnPaperNormal from './BandwidthOnPaperNormal/BandwidthOnPaperNor
 import BandwidthOnPaperWO from './BandwidthOnPaperWO/BandwithOnPaperWO';
 import Traffic from './Traffic/Traffic';
 import Dashboard from './Dashboard';
-import MenuItem from 'antd/lib/menu/MenuItem';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content, Footer } = Layout;
@@ -39,7 +38,7 @@ class PageTest extends Component {
     });
   };
 
-  displayFooter = (event) => {
+  displayFooter = () => {
     switch (this.state.collapsed) {
       case false:
         return (
@@ -57,20 +56,7 @@ class PageTest extends Component {
           </div>
         );
       case true:
-        return (
-          <div className="footer-sider">
-            <Footer
-              style={{
-                display: 'none',
-                backgroundColor: '#1A3547',
-                textAlign: 'left',
-                color: 'gray',
-                paddingLeft: '20px',
-              }}
-            >
-            </Footer>
-          </div>
-        );
+        return <div></div>;
       default:
         break;
     }
@@ -89,7 +75,7 @@ class PageTest extends Component {
       case 'active':
         return <BandwidthOnPaperSetOnActive />;
       default:
-        return <BandwidthOnPaperWO />;
+        return <Dashboard />;
     }
   };
 
