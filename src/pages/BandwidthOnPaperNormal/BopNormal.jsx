@@ -55,7 +55,7 @@ class BopNormal extends Component {
         <Row style={{ paddingBottom: '10px' }}>
           <Col span={12}>
             <Title style={{ color: '#686868' }} level={4}>
-              BOP Normal - February 22, 2021, 10:37 am
+              BOP (Normal) - February 22, 2021, 10:37 am
             </Title>
           </Col>
           <Col style={{ textAlign: 'right' }} span={12}>

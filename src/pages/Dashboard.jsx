@@ -1,11 +1,13 @@
 import React, { Fragment, PureComponent } from 'react';
 import Title from 'antd/lib/typography/Title';
-import { Row, Col, Card, Divider, Space } from 'antd';
+import { Divider, Space } from 'antd';
 import axios from 'axios';
 import {
   LineChart,
   BarChart,
   Bar,
+  Area,
+  AreaChart,
   Line,
   XAxis,
   YAxis,
@@ -87,7 +89,7 @@ class Dashboard extends PureComponent {
           Grafik Traffic (Hari ini)
         </Divider>
         <ResponsiveContainer width="100%" height="30%">
-          <LineChart
+          <AreaChart
             width={750}
             height={300}
             data={this.state.traffic}
@@ -103,15 +105,15 @@ class Dashboard extends PureComponent {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line
+            <Area
               type="monotone"
               dataKey="traffic"
               stroke="#8884d8"
               activeDot={{ r: 8 }}
             />
-            <Line type="monotone" dataKey="trafficIn" stroke="#82ca9d" />
-            <Line type="monotone" dataKey="trafficOut" stroke="#f72f36" />
-          </LineChart>
+            <Area type="monotone" dataKey="trafficIn" stroke="#82ca9d" />
+            <Area type="monotone" dataKey="trafficOut" stroke="#f72f36" />
+          </AreaChart>
         </ResponsiveContainer>
         <div className="user-bop">
           <Space direction="vertical">
@@ -121,7 +123,7 @@ class Dashboard extends PureComponent {
               User Existing (Hari ini)
             </span>
             <span style={{ fontSize: '14px', color: '#686868' }}>
-              {this.state.user}
+              {this.state.user} User
             </span>
           </Space>
         </div>
@@ -130,15 +132,15 @@ class Dashboard extends PureComponent {
           Grafik BOP (Hari ini)
         </Divider>
         <ResponsiveContainer width="100%" height="30%">
-          <BarChart width={750} height={300} data={this.state.bopGraf}>
+          <AreaChart width={750} height={300} data={this.state.bopGraf}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="customerName" />
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="bop" fill="#8884d8" />
-            <Bar dataKey="sumOfList" fill="#f72f36" />
-          </BarChart>
+            <Area dataKey="bop" fill="#8884d8" />
+            <Area dataKey="sumOfList" fill="#f72f36" />
+          </AreaChart>
         </ResponsiveContainer>
         <div className="user-bop">
           <Space direction="vertical">
@@ -148,13 +150,10 @@ class Dashboard extends PureComponent {
               Jumlah BOP (Hari ini)
             </span>
             <span style={{ fontSize: '14px', color: '#686868' }}>
-              {this.state.bop}
+              {this.state.bop} (Mbps)
             </span>
           </Space>
         </div>
-        <Row>
-          <Col span={24}></Col>
-        </Row>
       </Fragment>
     );
   }

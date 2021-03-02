@@ -91,7 +91,7 @@ class BopWO extends Component {
         <Row style={{ paddingBottom: '10px' }}>
           <Col span={12}>
             <Title style={{ color: '#686868' }} level={4}>
-              BOP WO - February 22, 2021, 10:41 am
+              BOP (WO) - February 22, 2021, 10:41 am
             </Title>
           </Col>
           <Col style={{ textAlign: 'right' }} span={12}>
