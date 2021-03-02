@@ -112,7 +112,7 @@ class PageTest extends Component {
             collapsed={this.state.collapsed}
           >
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-              <Menu.ItemGroup style={{ fontWeight: 'bold' }} title="DASHBOARD">
+              <Menu.ItemGroup title="DASHBOARD">
                 <Menu.Item
                   href="/dashboard"
                   key="dashboard"
@@ -122,7 +122,7 @@ class PageTest extends Component {
                   Dashboard
                 </Menu.Item>
               </Menu.ItemGroup>
-              <Menu.ItemGroup style={{ fontWeight: 'bold' }} title="RAW DATA">
+              <Menu.ItemGroup title="RAW DATA">
                 <SubMenu
                   key="sub1"
                   icon={<MinusSquareOutlined />}

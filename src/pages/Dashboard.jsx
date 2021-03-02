@@ -1,6 +1,6 @@
 import React, { Fragment, PureComponent } from 'react';
 import Title from 'antd/lib/typography/Title';
-import { Row, Col } from 'antd';
+import { Row, Col, Card, Divider, Space } from 'antd';
 import axios from 'axios';
 import {
   LineChart,
@@ -12,6 +12,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from 'recharts';
 
 class Dashboard extends PureComponent {
@@ -79,66 +80,80 @@ class Dashboard extends PureComponent {
   render() {
     return (
       <Fragment>
-        <Title level={1}>Dashboard</Title>
+        <Title style={{ color: '#686868' }} level={4}>
+          Dashboard
+        </Title>
+        <Divider orientation="left" plain>
+          Grafik Traffic (Hari ini)
+        </Divider>
+        <ResponsiveContainer width="100%" height="30%">
+          <LineChart
+            width={750}
+            height={300}
+            data={this.state.traffic}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="customerName" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="traffic"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
+            <Line type="monotone" dataKey="trafficIn" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="trafficOut" stroke="#f72f36" />
+          </LineChart>
+        </ResponsiveContainer>
         <div className="user-bop">
-          <Row>
-            <Col sm={24} md={24} lg={12} xl={12}>
-              <Title level={3}>User Existing (Hari ini)</Title>
-              <Title level={5}>{this.state.user}</Title>
-            </Col>
-            <Col sm={24} md={24} lg={12} xl={12}>
-              <Title level={3}>Jumlah BOP (Hari ini)</Title>
-              <Title level={5}>{this.state.bop}</Title>
-            </Col>
-          </Row>
+          <Space direction="vertical">
+            <span
+              style={{ fontSize: '14px', fontWeight: 'bold', color: '#686868' }}
+            >
+              User Existing (Hari ini)
+            </span>
+            <span style={{ fontSize: '14px', color: '#686868' }}>
+              {this.state.user}
+            </span>
+          </Space>
         </div>
 
+        <Divider orientation="left" style={{ paddingTop: '20px' }} plain>
+          Grafik BOP (Hari ini)
+        </Divider>
+        <ResponsiveContainer width="100%" height="30%">
+          <BarChart width={750} height={300} data={this.state.bopGraf}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="customerName" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="bop" fill="#8884d8" />
+            <Bar dataKey="sumOfList" fill="#f72f36" />
+          </BarChart>
+        </ResponsiveContainer>
+        <div className="user-bop">
+          <Space direction="vertical">
+            <span
+              style={{ fontSize: '14px', fontWeight: 'bold', color: '#686868' }}
+            >
+              Jumlah BOP (Hari ini)
+            </span>
+            <span style={{ fontSize: '14px', color: '#686868' }}>
+              {this.state.bop}
+            </span>
+          </Space>
+        </div>
         <Row>
-          <Col span={12} xl={24} lg={24} md={24} sm={24} xs={24}>
-            <div className="grafik-traffic">
-              <Title level={3}>Grafik Traffic (Hari ini)</Title>
-              <LineChart
-                width={750}
-                height={400}
-                data={this.state.traffic}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="customerName" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line
-                  type="monotone"
-                  dataKey="traffic"
-                  stroke="#8884d8"
-                  activeDot={{ r: 8 }}
-                />
-                <Line type="monotone" dataKey="trafficIn" stroke="#82ca9d" />
-                <Line type="monotone" dataKey="trafficOut" stroke="#f72f36" />
-              </LineChart>
-            </div>
-          </Col>
-
-          <Col span={12} xl={24} lg={24} md={24} sm={24} xs={24}>
-            <div className="grafik-bop">
-              <Title level={3}>Grafik BOP (Hari ini)</Title>
-              <BarChart width={750} height={400} data={this.state.bopGraf}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="customerName" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="bop" fill="#8884d8" />
-                <Bar dataKey="sumOfList" fill="#f72f36" />
-              </BarChart>
-            </div>
-          </Col>
+          <Col span={24}></Col>
         </Row>
       </Fragment>
     );
