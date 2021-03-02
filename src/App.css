@@ -1,2 +1,18 @@
 @import './css/style.css';
 @import 'antd/dist/antd.css';
+
+.ant-layout {
+  background-color: white;
+}
+
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button:not(.ant-btn-primary) {
+  border-color: transparent;
+}
+
+.anticon[tabindex] {
+    color: white
+}
+

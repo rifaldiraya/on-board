@@ -9,11 +9,13 @@ import {
 } from '@ant-design/icons';
 
 //pages
-import BandwidthOnPaperSetOnActive from './BandwidthOnPaperSetOnActive/BandwidthOnPaperSetOnActive';
-import BandwidthOnPaperNormal from './BandwidthOnPaperNormal/BandwidthOnPaperNormal';
-import BandwidthOnPaperWO from './BandwidthOnPaperWO/BandwithOnPaperWO';
-import Traffic from './Traffic/Traffic';
 import Dashboard from './Dashboard';
+
+//new Pages
+import BopActive from './BandwidthOnPaperSetOnActive/BopActive'
+import BopWO from './BandwidthOnPaperWO/BopWO'
+import BopNormal from './BandwidthOnPaperNormal/BopNormal'
+import TrafficNew from './Traffic/TrafficNew'
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content, Footer } = Layout;
@@ -67,13 +69,13 @@ class PageTest extends Component {
       case 'dashboard':
         return <Dashboard />;
       case 'traffic':
-        return <Traffic />;
+        return <TrafficNew />;
       case 'wo':
-        return <BandwidthOnPaperWO />;
+        return <BopWO />;
       case 'normal':
-        return <BandwidthOnPaperNormal />;
+        return <BopNormal />;
       case 'active':
-        return <BandwidthOnPaperSetOnActive />;
+        return <BopActive />;
       default:
         return <Dashboard />;
     }

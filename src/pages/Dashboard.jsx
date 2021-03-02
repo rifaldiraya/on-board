@@ -94,7 +94,7 @@ class Dashboard extends PureComponent {
         </div>
 
         <Row>
-          <Col span={12} xl={12} lg={24} md={24} sm={24} xs={24}>
+          <Col span={12} xl={24} lg={24} md={24} sm={24} xs={24}>
             <div className="grafik-traffic">
               <Title level={3}>Grafik Traffic (Hari ini)</Title>
               <LineChart
@@ -125,7 +125,7 @@ class Dashboard extends PureComponent {
             </div>
           </Col>
 
-          <Col span={12} xl={12} lg={24} md={24} sm={24} xs={24}>
+          <Col span={12} xl={24} lg={24} md={24} sm={24} xs={24}>
             <div className="grafik-bop">
               <Title level={3}>Grafik BOP (Hari ini)</Title>
               <BarChart width={750} height={400} data={this.state.bopGraf}>

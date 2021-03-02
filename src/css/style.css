@@ -8,15 +8,16 @@ html{
   background-color: aqua;
 }
 
-.anticon svg {
-  display: inline-block;
-  color: white;
-}
-
 .ant-layout-header {
   height: 64px;
   padding: 0 50px;
   line-height: 64px;
+}
+
+.ant-layout-sider-children {
+  height: 100%;
+  margin-top: -0.1px;
+  padding-top: 0.1px;
 }
 
 .title-bar {
@@ -99,4 +100,14 @@ html{
 
 .site-layout .site-layout-background {
   background: #fff;
+}
+
+/*From dashboard admin 2*/
+.btn-newOrder {
+  margin-right: 0px;
+  text-align: right;
+}
+
+.input-search {
+  padding: 0px 20px 0px 0px;
 }

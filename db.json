@@ -159,8 +159,8 @@
       "id": 1,
       "customerName": "Traffic Client_Traffic",
       "date": "2021-02-19/16:55:00",
-      "trafficIn": "",
-      "trafficOut": "",
+      "trafficIn": "0",
+      "trafficOut": "0",
       "traffic": "1194.02180179",
       "createdAt": "2021-02-20/18:22:54.888646",
       "updatedAt": "2021-02-20/18:22:54.888646"
