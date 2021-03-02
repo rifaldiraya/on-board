@@ -1,5 +1,6 @@
 {
-  "postWo": [{
+  "postWo": [
+    {
       "no": 1,
       "id": 1,
       "customerID": 19743,
@@ -61,7 +62,8 @@
     }
   ],
 
-  "postNormal": [{
+  "postNormal": [
+    {
       "no": 1,
       "id": 1,
       "customerID": 18751,
@@ -117,7 +119,8 @@
     }
   ],
 
-  "postActive": [{
+  "postActive": [
+    {
       "no": 1,
       "id": 1,
       "customerID": 15173,
@@ -154,7 +157,8 @@
       "bop": 5
     }
   ],
-  "postTraffic": [{
+  "postTraffic": [
+    {
       "no": 1,
       "id": 1,
       "customerName": "Traffic Client_Traffic",

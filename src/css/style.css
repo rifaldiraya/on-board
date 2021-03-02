@@ -1,8 +1,8 @@
-html{
+html {
   line-break: anywhere;
 }
 .logo {
-  background: url("https://placeimg.com/320/120/tech");
+  background: url('https://placeimg.com/320/120/tech');
   width: 420px;
   height: 420px;
   background-color: aqua;
@@ -57,7 +57,7 @@ html{
 
 .footer-sider {
   position: absolute;
-  background-color: #1A3547;
+  background-color: #1a3547;
   bottom: 0px;
   margin: 0px;
   width: 100%;

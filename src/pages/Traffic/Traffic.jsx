@@ -3,14 +3,10 @@ import axios from 'axios';
 import { Typography, Input, Button, Row, Col, List, Card, Space } from 'antd';
 
 import {
-  DatabaseOutlined,
-  FileOutlined,
-  MoreOutlined,
   CalendarOutlined,
   CarryOutOutlined,
   LoginOutlined,
-  BookOutlined,
-  StockOutlined
+  StockOutlined,
 } from '@ant-design/icons';
 const { Title } = Typography;
 const { Search } = Input;
@@ -41,7 +37,7 @@ const titleCardStyle = {
   paddingBottom: '0px',
 };
 
-class TrafficNew extends React.Component {
+class Traffic extends React.Component {
   state = {
     post: [],
   };
@@ -109,7 +105,9 @@ class TrafficNew extends React.Component {
                               <span style={cardStyle} level={4}>
                                 Traffic In / Traffic Out
                               </span>
-                              <p style={titleCardStyle}>{item.trafficIn} / {item.trafficOut}</p>
+                              <p style={titleCardStyle}>
+                                {item.trafficIn} / {item.trafficOut}
+                              </p>
                             </div>
                           </Space>
                         </Col>
@@ -117,9 +115,7 @@ class TrafficNew extends React.Component {
                           <Space style={{ height: '100%' }}>
                             <StockOutlined style={iconStyle} />
                             <div>
-                              <span style={cardStyle}>
-                                Traffic
-                              </span>
+                              <span style={cardStyle}>Traffic</span>
                               <p style={titleCardStyle}>{item.traffic}</p>
                             </div>
                           </Space>
@@ -128,9 +124,7 @@ class TrafficNew extends React.Component {
                           <Space style={{ height: '100%' }}>
                             <CalendarOutlined style={iconStyle} />
                             <div>
-                              <span style={cardStyle}>
-                                Created At
-                              </span>
+                              <span style={cardStyle}>Created At</span>
                               <p style={titleCardStyle}>{item.createdAt}</p>
                             </div>
                           </Space>
@@ -139,9 +133,7 @@ class TrafficNew extends React.Component {
                           <Space style={{ height: '100%' }}>
                             <CarryOutOutlined style={iconStyle} />
                             <div>
-                              <span style={cardStyle}>
-                                Update At
-                              </span>
+                              <span style={cardStyle}>Update At</span>
                               <p style={titleCardStyle}>{item.updatedAt}</p>
                             </div>
                           </Space>
@@ -160,4 +152,4 @@ class TrafficNew extends React.Component {
   }
 }
 
-export default TrafficNew;
+export default Traffic;

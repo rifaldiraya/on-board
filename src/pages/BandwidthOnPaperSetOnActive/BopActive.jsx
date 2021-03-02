@@ -5,10 +5,7 @@ import { Typography, Input, Button, Row, Col, List, Card, Space } from 'antd';
 import {
   DatabaseOutlined,
   BookOutlined,
-  UserOutlined,
   FileOutlined,
-  MoreOutlined,
-  RightOutlined,
 } from '@ant-design/icons';
 const { Title } = Typography;
 const { Search } = Input;
@@ -39,7 +36,7 @@ const titleCardStyle = {
   paddingBottom: '0px',
 };
 
-class Order extends React.Component {
+class BopActive extends React.Component {
   state = {
     post: [],
     inputValue: 1,
@@ -155,4 +152,4 @@ class Order extends React.Component {
   }
 }
 
-export default Order;
+export default BopActive;

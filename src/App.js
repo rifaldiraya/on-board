@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 //Pages
 import PageTest from './pages/PageTest';
-import Traffic from './pages/Traffic/TrafficNew';
+import Traffic from './pages/Traffic/Traffic';
 import Dashboard from './pages/Dashboard';
 import BandwidthOnPaperSetOnActive from './pages/BandwidthOnPaperSetOnActive/BopActive';
 import BandwidthOnPaperNormal from './pages/BandwidthOnPaperNormal/BopNormal';

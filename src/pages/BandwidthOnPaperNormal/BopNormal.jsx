@@ -5,8 +5,7 @@ import { Typography, Input, Button, Row, Col, List, Card, Space } from 'antd';
 import {
   DatabaseOutlined,
   FileOutlined,
-  MoreOutlined,
-  BookOutlined
+  BookOutlined,
 } from '@ant-design/icons';
 const { Title } = Typography;
 const { Search } = Input;
@@ -126,16 +125,6 @@ class BopNormal extends Component {
                             </span>
                             <p style={titleCardStyle}>{item.bop}</p>
                           </div>
-                          {/* <div style={{ textAlign: 'right' }}>
-                            <RightOutlined
-                              style={{
-                                textAlign: 'right',
-                                color: '#0065B3',
-                                marginRight: '0px',
-                                fontSize: '24px',
-                              }}
-                            />
-                          </div> */}
                         </Space>
                       </Col>
                     </Row>

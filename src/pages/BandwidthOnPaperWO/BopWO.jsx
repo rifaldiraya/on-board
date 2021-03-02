@@ -54,31 +54,31 @@ class BopWO extends Component {
     switch (data) {
       case 'Normal':
         return (
-            <Button
-              shape="round"
-              style={{
-                color: '#5DE0A1',
-                border: '1px solid #5DE0A1',
-                backgroundColor: 'transparent',
-              }}
-              type="primary"
-            >
-              {data}
-            </Button>
+          <Button
+            shape="round"
+            style={{
+              color: '#5DE0A1',
+              border: '1px solid #5DE0A1',
+              backgroundColor: 'transparent',
+            }}
+            type="primary"
+          >
+            {data}
+          </Button>
         );
       case 'Temporary Installation':
         return (
-            <Button
-              shape="round"
-              style={{
-                color: '#D2C9CA',
-                border: '1px solid #D2C9CA',
-                backgroundColor: 'transparent',
-              }}
-              type="primary"
-            >
-              {data}
-            </Button>
+          <Button
+            shape="round"
+            style={{
+              color: '#D2C9CA',
+              border: '1px solid #D2C9CA',
+              backgroundColor: 'transparent',
+            }}
+            type="primary"
+          >
+            {data}
+          </Button>
         );
       default:
         break;
