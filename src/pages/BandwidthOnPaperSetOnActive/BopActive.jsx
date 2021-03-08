@@ -97,7 +97,7 @@ class BopActive extends React.Component {
                         <p style={cardStyle}>{item.customerID}</p>
                       </Col>
                       <Col style={{ paddingLeft: '10px' }} span={6}>
-                        <Space>
+                        <Space style={{ height: '100%' }}>
                           <BookOutlined style={iconStyle} />
                           <div>
                             <span style={cardStyle} level={4}>

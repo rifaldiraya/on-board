@@ -90,7 +90,7 @@ class PageTest extends Component {
           </div>
           <Header
             className="site-layout-background"
-            style={{ padding: 0, background: '#1A3547' }}
+            style={{ padding: 0, background: 'transparent' }}
           >
             {React.createElement(
               this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
@@ -143,7 +143,7 @@ class PageTest extends Component {
                     key="normal"
                     onClick={this.handleClick}
                   >
-                    BOP Summary
+                    BOP (Normal)
                   </Menu.Item>
                 </SubMenu>
                 <Menu.Item
