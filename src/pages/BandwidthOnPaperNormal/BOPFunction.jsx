@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import axios from 'axios';
 import { Typography, Input, Button, Row, Col, List, Card, Space } from 'antd';
 
@@ -14,7 +14,6 @@ const onSearch = (value) => console.log(value);
 const allCardStyle = {
   paddingLeft: '10px',
   borderLeft: '2px solid #0065B3',
-  borderRadius: '10px',
   boxShadow: '5px 5px 10px #F4F4F4',
 };
 
@@ -26,6 +25,7 @@ const iconStyle = {
 
 const cardStyle = {
   margin: '0px 0px 0px 0px',
+  borderRadius: '10px',
   padding: '0px 0px 0px 0px',
   color: '#D2C9CA',
 };
@@ -36,19 +36,18 @@ const titleCardStyle = {
   paddingBottom: '0px',
 };
 
-class BopNormal extends Component {
+function BopNormal() {
   state = {
     post: [],
   };
 
-  componentDidMount() {
+  useEffect(){
     axios.get('http://localhost:3004/postNormal').then((res) => {
       this.setState({
         post: res.data,
       });
     });
   }
-  render() {
     return (
       <div className="order-main">
         <Row style={{ paddingBottom: '10px' }}>
@@ -138,6 +137,5 @@ class BopNormal extends Component {
       </div>
     );
   }
-}
 
 export default BopNormal;

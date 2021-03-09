@@ -14,6 +14,7 @@ const onSearch = (value) => console.log(value);
 const allCardStyle = {
   paddingLeft: '10px',
   borderLeft: '2px solid #0065B3',
+  borderRadius: '10px',
   boxShadow: '5px 5px 10px #F4F4F4',
 };
 
@@ -31,7 +32,6 @@ const cardStyle = {
 
 const titleCardStyle = {
   color: '#686868',
-  fontWeight: 'bold',
   marginBottom: '0px',
   paddingBottom: '0px',
 };
