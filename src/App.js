@@ -4,13 +4,16 @@ import './App.css';
 //Routing
 import { BrowserRouter, Route } from 'react-router-dom';
 
+//Tes
+import FunctionPageTest from './pages/FunctionPageTest'
+
 //Pages
-import PageTest from './pages/PageTest';
-import Traffic from './pages/Traffic/Traffic';
 import Dashboard from './pages/Dashboard';
-import BandwidthOnPaperSetOnActive from './pages/BandwidthOnPaperSetOnActive/BopActive';
-import BandwidthOnPaperNormal from './pages/BandwidthOnPaperNormal/BopNormal';
-import BandwidthOnPaperWO from './pages/BandwidthOnPaperWO/BopWO';
+import PageTest from './pages/PageTest';
+import Traffic from './pages/Traffic/FunctionTraffic';
+import BandwidthOnPaperSetOnActive from './pages/BandwidthOnPaperNormal/BopFunctionNormal';
+import BandwidthOnPaperNormal from './pages/BandwidthOnPaperNormal/BopFunctionNormal';
+import BandwidthOnPaperWO from './pages/BandwidthOnPaperWO/BopFunctionWO';
 
 function App() {
   return (

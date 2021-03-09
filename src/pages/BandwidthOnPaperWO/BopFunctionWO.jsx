@@ -1,32 +1,67 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import * as STYLE from '../../css/style';
 import { Typography, Input, Button, Row, Col, List, Card, Space } from 'antd';
 import {
   DatabaseOutlined,
   FileOutlined,
-  BookOutlined,
+  MoreOutlined,
 } from '@ant-design/icons';
-import * as STYLE from '../../css/style';
 
 const { Title } = Typography;
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
-function BopFunctionNormal() {
+function BopFunctionWO() {
   const [post, setPost] = useState();
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3004/postNormal')
-      .then((res) => setPost(res.data));
+    axios.get('http://localhost:3004/postWO').then((res) => {
+      setPost(res.data);
+    });
   });
+
+  const displayButton = (data) => {
+    switch (data) {
+      case 'Normal':
+        return (
+          <Button
+            shape="round"
+            style={{
+              color: '#5DE0A1',
+              border: '1px solid #5DE0A1',
+              backgroundColor: 'transparent',
+            }}
+            type="primary"
+          >
+            {data}
+          </Button>
+        );
+      case 'Temporary Installation':
+        return (
+          <Button
+            shape="round"
+            style={{
+              color: '#D2C9CA',
+              border: '1px solid #D2C9CA',
+              backgroundColor: 'transparent',
+            }}
+            type="primary"
+          >
+            {data}
+          </Button>
+        );
+      default:
+        break;
+    }
+  };
 
   return (
     <div className="order-main">
       <Row style={{ paddingBottom: '10px' }}>
         <Col span={12}>
           <Title style={{ color: '#686868' }} level={4}>
-            BOP (Normal) - February 22, 2021, 10:37 am
+            BOP (WO) - February 22, 2021, 10:41 am
           </Title>
         </Col>
         <Col style={{ textAlign: 'right' }} span={12}>
@@ -64,29 +99,20 @@ function BopFunctionNormal() {
                   <Row>
                     <Col span={6}>
                       <span style={STYLE.titleCardStyle}>
-                        {item.customerName}
+                        {item.billingName}
                       </span>
                       <p style={STYLE.cardStyle}>{item.customerID}</p>
-                    </Col>
-                    <Col style={{ paddingLeft: '10px' }} span={6}>
-                      <Space>
-                        <BookOutlined style={STYLE.iconStyle} />
-                        <div>
-                          <span style={STYLE.cardStyle} level={4}>
-                            Product
-                          </span>
-                          <p style={STYLE.titleCardStyle}>{item.productList}</p>
-                        </div>
-                      </Space>
                     </Col>
                     <Col style={{ paddingLeft: '50px' }} span={6}>
                       <Space style={{ height: '100%' }}>
                         <FileOutlined style={STYLE.iconStyle} />
                         <div>
                           <span style={STYLE.cardStyle} level={4}>
-                            Sum of List
+                            Sum of Product
                           </span>
-                          <p style={STYLE.titleCardStyle}>{item.sumOfList}</p>
+                          <p style={STYLE.titleCardStyle}>
+                            {item.sumOfProduct}
+                          </p>
                         </div>
                       </Space>
                     </Col>
@@ -101,6 +127,20 @@ function BopFunctionNormal() {
                         </div>
                       </Space>
                     </Col>
+                    <Col span={6}>
+                      <div
+                        style={{
+                          marginRight: '0px',
+                          paddingTop: '10px',
+                          textAlign: 'right',
+                        }}
+                      >
+                        {displayButton(item.productState)}
+                        <MoreOutlined
+                          style={{ color: '#686868', paddingLeft: '15px' }}
+                        />
+                      </div>
+                    </Col>
                   </Row>
                 </Card>
               </Col>
@@ -113,4 +153,4 @@ function BopFunctionNormal() {
   );
 }
 
-export default BopFunctionNormal;
+export default BopFunctionWO;

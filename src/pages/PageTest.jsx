@@ -12,11 +12,10 @@ import {
 import Dashboard from './Dashboard';
 
 //new Pages
-import BopActive from './BandwidthOnPaperSetOnActive/BopActive';
-import BopWO from './BandwidthOnPaperWO/BopWO';
-import BopNormal from './BandwidthOnPaperNormal/BopNormal';
-import Traffic from './Traffic/Traffic';
-import BopFunction from './BandwidthOnPaperNormal/BopFunctionNormal'
+import BopFunctionActive from './BandwidthOnPaperSetOnActive/BopFunctionActive';
+import FunctionTraffic from './Traffic/FunctionTraffic';
+import BopFunctionNormal from './BandwidthOnPaperNormal/BopFunctionNormal'
+import BopFunctionWO from './BandwidthOnPaperWO/BopFunctionWO';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content, Footer } = Layout;
@@ -25,7 +24,6 @@ class PageTest extends Component {
   state = {
     collapsed: false,
     key: '',
-    display: '',
   };
 
   toggle = () => {
@@ -70,13 +68,13 @@ class PageTest extends Component {
       case 'dashboard':
         return <Dashboard />;
       case 'traffic':
-        return <Traffic />;
+        return <FunctionTraffic />;
       case 'wo':
-        return <BopWO />;
+        return <BopFunctionWO />;
       case 'normal':
-        return <BopFunction />;
+        return <BopFunctionNormal />;
       case 'active':
-        return <BopActive />;
+        return <BopFunctionActive />;
       default:
         return <Dashboard />;
     }

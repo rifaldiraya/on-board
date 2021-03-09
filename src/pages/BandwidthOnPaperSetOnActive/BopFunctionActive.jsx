@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import * as STYLE from '../../css/style';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Typography, Input, Button, Row, Col, List, Card, Space } from 'antd';
+
 import {
   DatabaseOutlined,
-  FileOutlined,
   BookOutlined,
+  FileOutlined,
 } from '@ant-design/icons';
-import * as STYLE from '../../css/style';
-
 const { Title } = Typography;
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
-function BopFunctionNormal() {
+function BopActive() {
   const [post, setPost] = useState();
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3004/postNormal')
-      .then((res) => setPost(res.data));
+    axios.get('http://localhost:3004/postActive').then((res) => {
+      setPost(res.data);
+    });
   });
 
   return (
@@ -26,7 +26,7 @@ function BopFunctionNormal() {
       <Row style={{ paddingBottom: '10px' }}>
         <Col span={12}>
           <Title style={{ color: '#686868' }} level={4}>
-            BOP (Normal) - February 22, 2021, 10:37 am
+            BOP (Set Active) - February 22, 2021, 10:37 am
           </Title>
         </Col>
         <Col style={{ textAlign: 'right' }} span={12}>
@@ -69,7 +69,7 @@ function BopFunctionNormal() {
                       <p style={STYLE.cardStyle}>{item.customerID}</p>
                     </Col>
                     <Col style={{ paddingLeft: '10px' }} span={6}>
-                      <Space>
+                      <Space style={{ height: '100%' }}>
                         <BookOutlined style={STYLE.iconStyle} />
                         <div>
                           <span style={STYLE.cardStyle} level={4}>
@@ -113,4 +113,4 @@ function BopFunctionNormal() {
   );
 }
 
-export default BopFunctionNormal;
+export default BopActive;
