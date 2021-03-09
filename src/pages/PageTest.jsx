@@ -16,6 +16,7 @@ import BopActive from './BandwidthOnPaperSetOnActive/BopActive';
 import BopWO from './BandwidthOnPaperWO/BopWO';
 import BopNormal from './BandwidthOnPaperNormal/BopNormal';
 import Traffic from './Traffic/Traffic';
+import BopFunction from './BandwidthOnPaperNormal/BopFunctionNormal'
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content, Footer } = Layout;
@@ -73,7 +74,7 @@ class PageTest extends Component {
       case 'wo':
         return <BopWO />;
       case 'normal':
-        return <BopNormal />;
+        return <BopFunction />;
       case 'active':
         return <BopActive />;
       default:
